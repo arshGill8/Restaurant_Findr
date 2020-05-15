@@ -1,11 +1,12 @@
-import React from 'react';
-import './App.css';
-import {InputField} from './containers/InputField'
+import React from 'react'
+import RestaurantForm from './containers/RestaurantForm'
+import RestaurantList from './containers/RestaurantList'
 
 function App() {
   return (
-    <div className="App">
-      <InputField />
+    <div>
+      <RestaurantForm />
+      <RestaurantList />
     </div>
   );
 }

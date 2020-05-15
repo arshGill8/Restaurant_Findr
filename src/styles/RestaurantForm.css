@@ -1,0 +1,21 @@
+.form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.form__input {
+  padding: 0.7rem;
+  border: 2px solid lightgrey;
+}
+
+.form__button {
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: lightgrey;
+  border-radius: 0px 2px 2px 0;
+  border-style: none;
+}
+/*# sourceMappingURL=RestaurantForm.css.map */

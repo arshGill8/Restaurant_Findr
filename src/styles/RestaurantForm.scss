@@ -1,0 +1,16 @@
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &__input {
+        padding: 0.7rem;
+        border: 2px solid lightgrey;
+    }
+    &__button {
+        color: blueviolet;
+        font-weight: bold;
+        font-size: 1rem;
+        background-color: lightgrey;
+        border-radius: 0px 2px 2px 0;
+        border-style: none;
+    }
+}

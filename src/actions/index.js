@@ -1,36 +1,24 @@
-import * as types from "../constants/ActionTypes";
+import {  RESTAURANTS_REQUEST, RESTAURANTS_SUCCESS, RESTAURANTS_FAILED } from "../constants/ActionTypes";
 
-export const updateInput = event => {
-  return {
-    type: types.UPDATE_INPUT,
-    value: event.target.value,
-  };
-};
 
-export const selectCity = city => {
+export const fetchRestaurants = ({cityName}) => {
   return {
-    type: types.SELECT_CITY,
-    city,
-  };
-};
-
-export const requestRestaurants = city => {
-  return {
-    type: types.REQUEST_RESTAURANTS,
-    city,
+    type: RESTAURANTS_REQUEST,
+    cityName,
+    isFetching: true
   };
 };
 
 export const receiveRestaurants = restaurants => {
   return {
-    type: types.RECEIVE_RESTAURANTS,
+    type: RESTAURANTS_SUCCESS,
     restaurants,
   };
 };
 
 export const requestFailed = restaurants => {
   return {
-    type: types.REQUEST_FAILED,
+    type: RESTAURANTS_FAILED,
     restaurants,
   };
 };

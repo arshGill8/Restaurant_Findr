@@ -1,0 +1,26 @@
+.header {
+    text-align: center;
+    margin: 1rem;
+    text-decoration: underline;
+    color: black;
+    
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    
+    &__item {
+        margin: 1rem 0;
+        background-color: #dcb5dc;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border: 1px solid black;
+        padding: 5px;
+        align-items: center;
+
+        &--price {
+            text-align: center;
+        }
+    }
+}

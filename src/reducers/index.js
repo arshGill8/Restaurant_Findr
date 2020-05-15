@@ -1,8 +1,9 @@
-import inputReducer from "./inputReducer";
 import { combineReducers } from "redux";
+import restaurantReducer from "./restaurantReducer";
 
 const rootReducer = combineReducers({
-  inputValue: inputReducer
+  restaurant: restaurantReducer
 });
+
 
 export default rootReducer;

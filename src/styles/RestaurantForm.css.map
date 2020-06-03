@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,OAAO;CAajC;;AAZI,AAAD,YAAQ,CAAC;EACL,OAAO,EAAE,MAAM;EACf,MAAM,EAAE,mBAAmB;CAC9B;;AACA,AAAD,aAAS,CAAC;EACN,KAAK,EAAE,UAAU;EACjB,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAI;EACf,gBAAgB,EAAE,SAAS;EAC3B,aAAa,EAAE,aAAa;EAC5B,YAAY,EAAE,IAAI;CACrB",
-    "sources": [
-        "RestaurantForm.scss"
-    ],
-    "names": [],
-    "file": "RestaurantForm.css"
-}

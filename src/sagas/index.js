@@ -1,27 +1,18 @@
-import { takeLatest, call, put } from 'redux-saga/effects'
-import { RESTAURANTS_REQUEST, RESTAURANTS_SUCCESS, RESTAURANTS_FAILED } from '../constants/ActionTypes'
-import axios from 'axios'
+import { takeLatest, call, put } from "redux-saga/effects";
+import { RESTAURANTS_REQUEST  } from "constants/ActionTypes";
+import { requestFailed, receiveRestaurants } from "actions";
+import fetchRestaurants from "api";
 
-function* fetchRestaurants({cityName}) {
-    try{
-        console.log('attempting to call api')
-        const response = yield call(axios.get, `http://opentable.herokuapp.com/api/restaurants?city=${cityName}`)
-        yield put({type: RESTAURANTS_SUCCESS, restaurants: response.data.restaurants})
-    }
-   catch (e) {
-    console.log(e)
-    yield put({type: RESTAURANTS_FAILED, e})
-
-   }
+export function* fetchRestaurantsAsync({ cityName }) {
+  try {
+    const data = yield call(fetchRestaurants, cityName);
+    // let names = data.forEach((r=> console.log(r.name)));
+    yield put(receiveRestaurants(data));
+  } catch (e) {
+    yield put(requestFailed(e));
+  }
 }
 
-function* watchFetchRestaurant() {
-    console.log('sagas works')
-    yield takeLatest(RESTAURANTS_REQUEST, fetchRestaurants)
-}
-
-export default function* rootSaga() {
-    yield (
-        watchFetchRestaurant()
-    )
+export default function* watchFetchRestaurant() {
+  yield takeLatest(RESTAURANTS_REQUEST, fetchRestaurantsAsync);
 }

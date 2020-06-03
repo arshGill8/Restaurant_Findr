@@ -1,7 +1,7 @@
-import {  RESTAURANTS_REQUEST, RESTAURANTS_SUCCESS, RESTAURANTS_FAILED } from "../constants/ActionTypes";
+import {  RESTAURANTS_REQUEST, RESTAURANTS_SUCCESS, RESTAURANTS_FAILED } from "constants/ActionTypes";
 
 
-export const fetchRestaurants = ({cityName}) => {
+export const fetchRestaurants = (cityName) => {
   return {
     type: RESTAURANTS_REQUEST,
     cityName,

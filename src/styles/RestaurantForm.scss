@@ -1,15 +1,16 @@
 .form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    &__input {
+    &__textArea {
         padding: 0.7rem;
-        border: 2px solid lightgrey;
+        border: 2px solid black;
+      
     }
     &__button {
-        color: blueviolet;
+        color: white;
         font-weight: bold;
         font-size: 1rem;
-        background-color: lightgrey;
+        background-color: black;
         border-radius: 0px 2px 2px 0;
         border-style: none;
     }

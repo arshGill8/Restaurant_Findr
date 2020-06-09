@@ -1,20 +1,36 @@
 import React from "react";
-import { shallow } from 'enzyme'
+import "@testing-library/jest-dom";
+import {
+  render,
+  cleanup,
+  fireEvent,
+  waitForElement,
+  waitFor,
+} from "@testing-library/react";
 import App from "components/App";
-import RestaurantForm from 'containers/RestaurantForm'
-import RestaurantList from 'containers/RestaurantList'
+import Root from "root";
+import { fetchRestaurants } from "actions";
 
-let wrapped
+afterEach(cleanup);
 
-beforeEach(()=> {
-  wrapped = shallow(<App />);
-})
+const fetchList = jest.fn(() => []);
 
-it("shows a restaurant search form", () => {
-  expect(wrapped.find(RestaurantForm).length).toEqual(1);
+it("allows users to enter a city name and submit form", async () => {
+  const { getByTestId, debug } = render(
+    <Root>
+      <App />
+    </Root>
+  );
+
+  const cityInput = getByTestId("city_input");
+
+  fireEvent.change(cityInput, { target: { value: "Toronto" } });
+
+  expect(cityInput.value).toBe("Toronto");
+
+  const cityForm = getByTestId("city_form");
+
+  fireEvent.submit(cityForm);
+
+  expect(cityInput.value).toBe("");
 });
-
-it("shows a restaurant result list", () => {
-  expect(wrapped.find(RestaurantList).length).toEqual(1);
-});
-

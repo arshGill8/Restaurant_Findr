@@ -1,26 +1,72 @@
+$desktop: 1024px;
+
 .header {
-    text-align: center;
-    margin: 1rem;
-    text-decoration: underline;
+  color: black;
+  font-size: 1.6rem;
+  text-align: center;
+  width: 15rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 4px solid black;
+  margin: 2rem auto;
+
+  @media (min-width: $desktop) {
     color: black;
-    
+    font-size: 2rem;
+    text-align: center;
+    width: 20rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 4px solid black;
+    margin: 2.8rem auto;
+  }
 }
-
+.sub-headings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.2fr;
+  border: 8px solid darkblue;
+  background: cornflowerblue;
+  padding: 0px 0.85rem;
+  border-radius: 8px;
+  font-size: 11px;
+  margin-bottom: 1rem;
+  @media (min-width: 1024px) {
+    border: 6px solid darkblue;
+    padding: 0px 2rem;
+    font-size: 16px;
+    margin: 0 2rem 1rem;
+  }
+}
 .list {
-    list-style: none;
-    padding: 0;
-    
-    &__item {
-        margin: 1rem 0;
-        background-color: #dcb5dc;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        border: 1px solid black;
-        padding: 5px;
-        align-items: center;
+  list-style: none;
+  padding: 0;
 
-        &--price {
-            text-align: center;
-        }
+  @media (min-width: $desktop) {
+    margin: 0 2rem;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+    background-color: cornflowerblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.2fr;
+    border: 4px solid grey;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+    align-items: center;
+    font-size: 0.9rem;
+    border-radius: 6px;
+
+    @media (min-width: $desktop) {
+      padding: 1rem 1rem;
+      font-size: 1rem;
+      border-radius: 6px;
     }
+
+    &--name {
+      width: 7rem;
+
+      @media (min-width: $desktop) {
+        width: auto;
+      }
+    }
+  }
 }

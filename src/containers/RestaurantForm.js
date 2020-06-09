@@ -1,10 +1,11 @@
 import { connect } from "react-redux";
 import RestaurantForm from "components/restaurantForm";
-import { fetchRestaurants } from "actions";
+import { fetchRestaurants, filterList } from "actions";
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchRestaurants: city => dispatch(fetchRestaurants(city))
+    fetchRestaurants: city => dispatch(fetchRestaurants(city)),
+    filterList: filter => dispatch(filterList(filter))
   }
 }
 

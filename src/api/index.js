@@ -4,12 +4,11 @@ const URL = `http://opentable.herokuapp.com/api/restaurants?city=`;
 
 const fetchRestaurants = async (cityName) => {
   const response = await axios.get(`${URL}${cityName}`);
-  const restaurants = response.data.restaurants;
-
   if (response.status >= 400) {
-    throw new Error(restaurants.errors);
+    throw new Error(response.errors);
   }
-  return restaurants;
+  return response;
 };
 
 export default fetchRestaurants;
+

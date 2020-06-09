@@ -2,6 +2,7 @@ import {
   RESTAURANTS_REQUEST,
   RESTAURANTS_SUCCESS,
   RESTAURANTS_FAILED,
+  FILTER_LIST,
 } from "constants/ActionTypes";
 
 const initialState = {
@@ -10,35 +11,47 @@ const initialState = {
   isInvalid: false,
   restaurants: [],
   name: [],
-  address: {},
-  area: {},
-  // add new state stuff here
+  address: [],
+  area: [],
+  filter: "",
 };
 
 const restaurantReducer = (state = initialState, action) => {
   switch (action.type) {
     case RESTAURANTS_REQUEST:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         city: action.cityName,
         isFetching: true,
-        isInvalid: false,
-      });
+      };
     case RESTAURANTS_SUCCESS:
-      console.log("SUCCESSS!!");
-      return Object.assign({}, state, {
+      return {
+        ...state,
         isFetching: false,
-        isInvalid: false,
-        restaurants: action.restaurants,
-        // name: action.restaurants.name,
-        // address: action.restaurants.address,
-        // area: action.restaurants.area,
-        // add new feature here
-      });
+        restaurants: action.restaurants.data.restaurants,
+        name: action.restaurants.data.restaurants.map((r) => r.name),
+        address: action.restaurants.data.restaurants.map((r) => r.address),
+        area: action.restaurants.data.restaurants.map((r) => r.area),
+      };
     case RESTAURANTS_FAILED:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         isFetching: false,
         isInvalid: true,
-      });
+      };
+    case FILTER_LIST:
+      console.log(action.filterName);
+      return {
+        ...state,
+        filter: action.filterName,
+        restaurants: state.restaurants.filter(
+          (r) =>
+            r.name.toLowerCase().includes(action.filterName.toLowerCase()) +
+            r.address.toLowerCase().includes(action.filterName.toLowerCase()) +
+            r.area.toLowerCase().includes(action.filterName.toLowerCase())
+        ),
+      };
+
     default:
       return state;
   }

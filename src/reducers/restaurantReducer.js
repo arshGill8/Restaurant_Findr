@@ -40,7 +40,6 @@ const restaurantReducer = (state = initialState, action) => {
         isInvalid: true,
       };
     case FILTER_LIST:
-      console.log(action.filterName);
       return {
         ...state,
         filter: action.filterName,

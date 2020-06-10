@@ -1,6 +1,6 @@
 import React from "react";
-import RestaurantForm from "containers/RestaurantForm";
-import RestaurantList from "containers/RestaurantList";
+import RestaurantForm from "containers/restaurant_form";
+import RestaurantList from "containers/restaurant_list";
 import 'styles/app.scss'
 
 const App = () => {

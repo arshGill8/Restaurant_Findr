@@ -1,5 +1,5 @@
 import React from "react";
-import "styles/restaurantList.scss";
+import "styles/restaurantlist.scss";
 
 const RestaurantList = (props) => (
   <>

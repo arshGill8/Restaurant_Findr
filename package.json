@@ -1,10 +1,14 @@
 {
   "name": "interview_project",
   "version": "0.1.0",
+  "engines": {
+    "node": "12.x"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
+    "node": "^14.4.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "styles/restaurantform.scss";
+import "styles/restaurantform.css";
 
 class RestaurantForm extends Component {
   state = { cityName: "", filterName: "" };

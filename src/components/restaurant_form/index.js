@@ -61,6 +61,7 @@ class RestaurantForm extends Component {
           </label>
           <input
             type="text"
+            data-testid="filter_input"
             className="form__textArea"
             value={this.state.filterName}
             name="filterName"

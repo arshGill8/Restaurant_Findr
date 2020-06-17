@@ -9,10 +9,14 @@ const RestaurantList = (props) => (
       <h2>Address</h2>
       <h2>Rating</h2>
     </div>
-    <ul data-testid="list" className="list">
+    <ul className="list">
       {props.restaurants.map((restaurant) => {
         return (
-          <li key={restaurant.id} className="list__item">
+          <li
+            data-testid="list-item"
+            key={restaurant.id}
+            className="list__item"
+          >
             <div className="list__item--name">{restaurant.name}</div>
             <div>{restaurant.address}</div>
             <div className="list__item--price">{restaurant.price}</div>

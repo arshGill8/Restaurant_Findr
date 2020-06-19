@@ -18,7 +18,7 @@ const RestaurantList = (props) => (
             className="list__item"
           >
             <div className="list__item--name">{restaurant.name}</div>
-            <div>{restaurant.address}</div>
+            <div className="list__item--address">{restaurant.address}</div>
             <div className="list__item--price">{restaurant.price}</div>
           </li>
         );

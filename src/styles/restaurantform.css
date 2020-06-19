@@ -12,8 +12,8 @@
   text-align: center;
   margin: 0;
   color: black;
-  background: cornflowerblue;
-  padding: 2rem 0;
+  background: orange;
+  padding: 1.5rem 0;
   font-size: 1.8rem;
   margin-bottom: 2rem;
 }
@@ -22,20 +22,21 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  font-size: 1rem;
+  font-size: 1.44rem;
   width: 4.2rem;
   font-weight: bold;
 }
 
 .form__textArea {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   padding: 0.5rem;
+  max-width: 8.5rem;
   border: 2px solid black;
 }
 
 .form__button {
   color: white;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   background-color: black;
   border-radius: 0px 2px 2px 0;
   border-style: none;

@@ -1,13 +1,16 @@
 $desktop: 1024px;
+$tablet: 768px;
 
 .header {
   color: black;
   font-size: 1.6rem;
   text-align: center;
   width: 15rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 4px solid black;
-  margin: 2rem auto;
+  padding: 0.3rem;
+  border: 4px solid black;
+  margin: 3rem auto;
+  background: orange;
+  
 
   @media (min-width: $desktop) {
     color: black;
@@ -18,27 +21,37 @@ $desktop: 1024px;
     border-bottom: 4px solid black;
     margin: 2.8rem auto;
   }
+
 }
+
 .sub-headings {
   display: grid;
   grid-template-columns: 1fr 1fr 0.2fr;
-  border: 8px solid darkblue;
-  background: cornflowerblue;
+  border: 4px solid black;
+  background: orange;
   padding: 0px 0.85rem;
-  border-radius: 8px;
   font-size: 11px;
   margin-bottom: 1rem;
+
+  @media (min-width: 600px) {
+  margin: 0 1rem;
+  }
   
   @media (min-width: 1024px) {
-    border: 6px solid darkblue;
     padding: 0px 2rem;
     font-size: 16px;
     margin: 0 2rem 1rem;
   }
 }
+
 .list {
   list-style: none;
   padding: 0;
+
+
+  @media (min-width: $tablet) {
+    margin: 1rem;
+  }  
 
   @media (min-width: $desktop) {
     margin: 0 2rem;
@@ -46,20 +59,23 @@ $desktop: 1024px;
 
   &__item {
     margin-bottom: 1rem;
-    background-color: cornflowerblue;
+    background-color: orange;
     display: grid;
     grid-template-columns: 1fr 1fr 0.2fr;
-    border: 4px solid grey;
+    border: 4px solid black;
     font-weight: bold;
     padding: 1rem 0.5rem;
     align-items: center;
     font-size: 0.9rem;
-    border-radius: 6px;
+    
 
-    @media (min-width: $desktop) {
+    @media (min-width: $tablet) {
       padding: 1rem 1rem;
       font-size: 1rem;
       border-radius: 6px;
+    }
+    @media (min-width: $desktop) {
+   font-size: 1.15rem;
     }
 
     &--name {
@@ -69,5 +85,11 @@ $desktop: 1024px;
         width: auto;
       }
     }
+   &--address {
+     max-width: 6.5rem;
+     @media (min-width: $desktop) {
+      max-width: 8.5rem;
+    }
+   }  
   }
 }

@@ -43,7 +43,7 @@ class RestaurantForm extends Component {
             value={this.state.cityName}
             name="cityName"
             onChange={this.handleChange}
-            placeholder="Enter name of city"
+            placeholder="City name"
             id="cityName"
           />
           <button

@@ -24,6 +24,7 @@
 .sub-headings {
   display: -ms-grid;
   display: grid;
+  font-weight: bolder;
   -ms-grid-columns: 1fr 1fr 0.2fr;
       grid-template-columns: 1fr 1fr 0.2fr;
   border: 4px solid black;

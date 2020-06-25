@@ -9,6 +9,7 @@ const RestaurantList = (props) => (
       <h2>Address</h2>
       <h2>Rating</h2>
     </div>
+ 
     <ul className="list">
       {props.restaurants.map((restaurant) => {
         return (

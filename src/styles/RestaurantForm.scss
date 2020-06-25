@@ -7,6 +7,7 @@
     text-align: center;
     margin: 0;
     color: black;
+    font-weight: bold;
     background: orange;
     padding: 1.5rem 0;
     font-size: 1.8rem;
@@ -45,15 +46,17 @@
       margin: 0 1rem;
       align-self: center;
       margin-right: 0;
-      font-size: 1.25rem;
+      font-size: 1.75rem;
       width: 6rem;
       font-weight: bold;
     }
 
     &__textArea {
-      font-size: 1rem;
+      font-size: 1.25rem;
       padding: 0.5rem;
       border: 2px solid black;
+      max-width: 10rem;
+  
     }
 
     &__button {
@@ -62,7 +65,8 @@
       background-color: black;
       border-radius: 0px 2px 2px 0;
       border-style: none;
-      font-weight: 100;
+      font-weight: 500;
+      padding: 0 0.5rem;
     }
   }
 }

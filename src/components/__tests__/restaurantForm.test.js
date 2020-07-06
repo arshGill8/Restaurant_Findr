@@ -25,8 +25,4 @@ it("allows a user to enter a city name and filter name", async () => {
   expect(cityInput.value).toBe("Toronto");
   expect(filterInput.value).toBe("100");
 
-  // const cityForm = getByTestId("city_form");
-
-  // fireEvent.submit(cityForm);
-
 });

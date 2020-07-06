@@ -15,4 +15,4 @@ the object.assign method when creating new objects.
 5. I would improve the api by adding custom images to the restaurant objects, at the moment it seems to be the same icon for all restaurants.
 
 
-6. I used the Axios library which parses JSON data automatically when a request is made so I did not have to use any methods to manually transform incoming data. 
+6. I used the Axios library which parses JSON data automatically when a request is made so I did not have to use any js methods to manually transform incoming data. 
